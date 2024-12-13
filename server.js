@@ -15,7 +15,7 @@ app.listen(PORT, () => {
 
 /*app.listen(3000, '172.16.0.122', () => {
     console.log('Servidor escuchando en http://172.16.0.122:3000');
-  });*/
+  });
 //Inicializa la base de datos SQL
 const sqlConfig = {
     user : 'GesDBUsr',
@@ -83,6 +83,7 @@ app.post('/login', async (req, res) => {
         res.status(500).send({ message: 'Error en el servidor', error: err.message });
     }
 });
+*/
 
 
 
