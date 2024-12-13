@@ -1,5 +1,3 @@
-
-  
 const express = require('express');
 const bodyParser = require('body-parser');
 const sql = require('mssql');
@@ -10,9 +8,14 @@ const PORT = 3006;
 app.use(express.static('public')); //Para servir archivos estaticos
 app.use(bodyParser.json());
 
-app.listen(3000, '172.16.0.122', () => {
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+
+/*app.listen(3000, '172.16.0.122', () => {
     console.log('Servidor escuchando en http://172.16.0.122:3000');
-  });
+  });*/
 //Inicializa la base de datos SQL
 const sqlConfig = {
     user : 'GesDBUsr',
@@ -82,9 +85,5 @@ app.post('/login', async (req, res) => {
 });
 
 
-// Iniciar el servidor
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
 
 
