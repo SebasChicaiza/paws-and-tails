@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Paws & Tails</title>
+        <link rel="stylesheet" href="../estilos/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+        <link rel="icon" href="../images/logoPawsTails-noFondo.png" type="image/png">
+    </head>
+    <body id="body-cuenta">
+        <header>            
+            <nav class="navbar">
+                <ul class="navbar-nav left">
+                    <img src="../images/logoPawsTails-noFondo.png" alt="Logo" class="logo"/>
+                    <h1 class="oswald-title">
+                        Paws & Tails
+                    </h1>
+                </ul>
+                <div class="menu-icon" id="menu-icon">&#9776;</div>
+                <ul class="navbar-nav right" id="nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cuenta.html">Mi Cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="toggle-btn" onclick="toggleDarkMode()">🌞 / 🌙</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="div-relleno"></div>   
+        <div class="div-form">
+            <h2>Registro de Usuario</h2>
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre de Usuario</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número de teléfono</label>
+                    <input type="text" id="numero" name="numero" placeholder="Ingrese su número de teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme su contraseña" required>
+                </div>
+                <button type="submit" class="form-button">Registrarse</button>
+                <div class="form-footer">
+                    ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a>
+                </div>
+            </form>
+        </div>       
+        <div id="div-relleno"></div>   
+        
+        <footer class="footer">
+            <!-- Redes Sociales -->
+            <div class="social-media">
+                <a href="https://www.facebook.com">
+                    <img src="../images/footer/facebookIcon.png" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="../images/footer/instagramIcon.png" width="24" height="24">
+                </a>
+                <a href="https://x.com/">
+                    <img src="../images/footer/xIcon.png" width="24" height="24">
+                </a>
+            </div>
+    
+            <div class="derechos-reservados">
+                <a>© 2024 Paws & Tails. Todos los derechos reservados.</a>
+            </div>
+        </footer>
+        <script src="../app.js"></script>       
+        <script src="../scripts/script.js"></script>        
+    
+        <script>
+            // Recuperar valores del sessionStorage y rellenar los campos al cargar la página
+            window.addEventListener('DOMContentLoaded', () => {
+                const inputs = document.querySelectorAll('#registroForm input');
+                inputs.forEach(input => {
+                    const savedValue = sessionStorage.getItem(input.id);
+                    if (savedValue) {
+                        input.value = savedValue; // Rellenar los campos con los valores guardados
+                    }
+                });
+            });
+    
+            // Guardar valores en sessionStorage cada vez que el usuario escribe
+            document.querySelectorAll('#registroForm input').forEach(input => {
+                input.addEventListener('input', (event) => {
+                    sessionStorage.setItem(event.target.id, event.target.value);
+                });
+            });
+        </script>
+    </body>
+    
+    
+</html>

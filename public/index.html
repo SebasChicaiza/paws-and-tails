@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title class="oswald-title">Paws & Tails</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logoPawsTails-noFondo.png" type="image/png">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-nav left">
+                <img src="images/logoPawsTails-noFondo.png" alt="Logo" class="logo" />
+                <h1 class="oswald-title">
+                    Paws & Tails
+                </h1>
+            </ul>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="navbar-nav right" id="nav-links">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/carrito.html">Carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/cuenta.html">Mi Cuenta</a>
+                </li>
+                <li class="nav-item">
+                    <button class="toggle-btn" onclick="toggleDarkMode()">🌞 / 🌙</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div class="dets_ini_todos">
+            <div class="ini_dets" id="ini_det1">
+                <div class="img_dets">
+                    <img src="images/principal/perro-hogar2.jpg" id="img_ini_1">
+                </div>
+                <div class="text_dets">
+                    <p>Ya sea para <br>dentro de tu hogar</p>
+                </div>
+            </div>
+            <div class="ini_dets" id="ini_det2">                
+                <div class="text_dets">
+                    <p>Para cuando <br>estén solos</p>
+                </div>
+                <div class="img_dets">
+                    <img src="images/principal/perro-gato-jugando.jpg" id="img_ini_2">
+                </div>
+            </div>
+            <div class="ini_dets" id="ini_det3">
+                <div class="img_dets">
+                    <img src="images/principal/perro-auto.jpg" id="img_ini_3">
+                </div>
+                <div class="text_dets">
+                    <p>O para cuando <br>vayan de paseo</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-container">
+            <video autoplay muted loop>
+              <source src="videos/variosPerros.mp4" type="video/mp4">
+              Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="overlay-text">
+                Para demostrarles lo mucho que los <span>amas</span>
+            </div>            
+        </div>
+        <div class="div-img-ini">
+            <a href="pages/productos.html">
+                <img src="images/aniLoveIni.png" class="imagen-inicio">
+            </a>
+            <div class="div-text-ini">
+                <h2 style="font-family: Oswald, sans-serif;">Tenemos los mejores accesorios <br> para tu mascota</h2>
+            </div>
+            <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: -0.1em; font-size: 0.8em;"
+                ;><br>Revisa nuestro catálogo haciendo click en la imagen</h3>
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <!-- Redes Sociales -->
+        <div class="social-media">
+            <a href="https://www.facebook.com">
+                <img src="images/footer/facebookIcon.png" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="images/footer/instagramIcon.png" width="24" height="24">
+            </a>
+            <a href="https://x.com/">
+                <img src="images/footer/xIcon.png" width="24" height="24">
+            </a>
+        </div>
+
+        <div class="derechos-reservados">
+            <a>© 2024 Paws & Tails. Todos los derechos reservados.</a>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+
+
+</html>

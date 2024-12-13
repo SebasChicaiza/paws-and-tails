@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Paws & Tails</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logoPawsTails-noFondo.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-nav left">
+                <img src="../images/logoPawsTails-noFondo.png" alt="Logo" class="logo" />
+                <h1 class="oswald-title">
+                    Paws & Tails
+                </h1>
+            </ul>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="navbar-nav right" id="nav-links">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrito.html">Carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cuenta.html">Mi Cuenta</a>
+                </li>
+                <li class="nav-item">
+                    <button class="toggle-btn" onclick="toggleDarkMode()">🌞 / 🌙</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="quienes-somos-title">
+            <h2>¿Quiénes somos?</h2>
+        </div>
+        <div class="nosotros-carrousel">
+            <div class="nosotros">
+                <img src="../images/nosotros/perroygato.png" alt="Mascotas 1">
+                <img src="../images/nosotros/varPets2.png" alt="Mascotas 2">
+                <img src="../images/nosotros/varPets.png" alt="Mascotas 3">
+            </div>
+        </div>
+    </section>
+    <div>
+        <h3 class="quienes-somos-text">Somos una tienda de mascotas ubicada en la ciudad de Quito, sector la
+            floresta.<br>
+            Amantes de los animales y del bienestar de nuestros peluditos.</h3>
+    </div>
+    <div class="custom-video-player">
+        <video id="video" src="../videos/VideoFinPerros.mp4" poster="../images/logoPawsTails-noFondo.png"></video>
+        <div class="controls">
+            <button id="playPause">▶️</button>
+            <input id="seekBar" type="range" min="0" value="0" step="1">
+            <button id="mute">🔇</button>
+            <button id="fullscreen">⛶</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Redes Sociales -->
+        <div class="social-media">
+            <a href="https://www.facebook.com">
+                <img src="../images/footer/facebookIcon.png" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="../images/footer/instagramIcon.png" width="24" height="24">
+            </a>
+            <a href="https://x.com/">
+                <img src="../images/footer/xIcon.png" width="24" height="24">
+            </a>
+        </div>
+
+        <div class="derechos-reservados">
+            <a>© 2024 Paws & Tails. Todos los derechos reservados.</a>
+        </div>
+    </footer>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>

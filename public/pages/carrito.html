@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Paws & Tails</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logoPawsTails-noFondo.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-nav left">
+                <img src="../images/logoPawsTails-noFondo.png" alt="Logo" class="logo" />
+                <h1 class="oswald-title">
+                    Paws & Tails
+                </h1>
+            </ul>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="navbar-nav right" id="nav-links">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="carrito.html">Carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cuenta.html">Mi Cuenta</a>
+                </li>
+                <li class="nav-item">
+                    <button class="toggle-btn" onclick="toggleDarkMode()">🌞 / 🌙</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div class="video-carrito-container">
+            <video autoplay muted loop>
+                <source src="../videos/perroyduena.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+        </div>
+        <div id="div-tit-carrito">
+            <h2 id="miCarritoTit">Mi carrito</h2>
+            <img src="../images/carrito/carritoIcon.png" id="iconCarrito">
+        </div>
+    </div>
+    
+
+    <main class="main-carrito">
+        <div class="contenedor-carrito">
+            <div id="miCarritoDet">
+                <h3 id="tit-desglose">Mis productos</h3>                        
+            </div>
+            
+        </div>  
+        <div class="seccion-2-carr">
+            <a href="productos.html" id="recordatorioCarrito">
+                <h4>¿Te has olvidado algo?
+                    Presiona aquí para volver a ver nuestros productos
+                    y añadirlos a tu carrito
+                </h4>
+                <img src="../images/mascotas.jpg" id="img_recordatorio">
+            </a>
+        </div>            
+    </main>   
+    <button type="button" id="btn_pagar">Pagar</button>
+ 
+    <footer class="footer">
+        <!-- Redes Sociales -->
+        <div class="social-media">
+            <a href="https://www.facebook.com">
+                <img src="../images/footer/facebookIcon.png" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="../images/footer/instagramIcon.png" width="24" height="24">
+            </a>
+            <a href="https://x.com/">
+                <img src="../images/footer/xIcon.png" width="24" height="24">
+            </a>
+        </div>
+
+        <div class="derechos-reservados">
+            <a>© 2024 Paws & Tails. Todos los derechos reservados.</a>
+        </div>
+    </footer>
+    <script src="../scripts/script.js"></script>
+    <script src="../app.js"></script>
+    
+    
+</body>
+
+</html>

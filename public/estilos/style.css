@@ -1,0 +1,1443 @@
+/* Estilos para los títulos */
+.title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    /* Mantén el alto completo */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #555;
+    color: #ffffff;
+}
+
+body.dark-mode .nav-item a {
+    color: #ffffff;
+}
+
+body.dark-mode #nav-links {
+    background-color: #555;
+    color: #ffffff;
+}
+
+body.dark-mode .custom-video-player {
+    background-color: white;
+    border-radius: 2em;
+    color: #ffffff;
+}
+
+/* Modo oscuro para dets_ini_todos */
+body.dark-mode .dets_ini_todos {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Modo oscuro para video-container */
+body.dark-mode .video-container {
+    background-color: #2a2a2a;
+    border-color: #444444;
+}
+
+/* Modo oscuro para video-container */
+body.dark-mode .div-img-ini {
+    background-color: #2a2a2a;
+    border-color: #444444;
+}
+
+body.dark-mode .div-img-ini h3 {
+    color: white;
+    border-color: #444444;
+}
+
+body.dark-mode .producto {
+    background-color: white;
+    color: #17a2b8;
+    border-color: #bfb8b8;
+}
+
+body.dark-mode #div-tit-carrito {
+    background-color: #d6d6d6;
+    color: #17a2b8;
+    border-color: #bfb8b8;
+}
+
+body.dark-mode #miCarritoTit {
+    background-color: #d6d6d6;
+    color: #17a2b8;
+    border-color: #bfb8b8;
+}
+
+body.dark-mode .div-form {
+    background-color: #d6d6d6;
+    border-color: #bfb8b8;
+}
+
+body.dark-mode #registroForm {
+    background-color: #d6d6d6;
+}
+
+body.dark-mode #registroForm input {
+    background-color: #d6d6d6;
+    border-color: white;
+}
+
+body.dark-mode #loginForm input {
+    background-color: #d6d6d6;
+    border-color: white;
+}
+
+body.dark-mode .toggle-btn {
+    background-color: #d6d6d6;
+    border-color: white;
+}
+
+
+/* Botón */
+.toggle-btn {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    background-color: #17a2b8;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.oswald-title {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.4em;
+}
+
+ul {
+    list-style-type: none;
+    flex-direction: row;
+    gap: 1em;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.logo {
+    width: 10%;
+    min-width: 5em;
+    height: auto;
+    align-self: center;
+    max-width: auto;
+    max-height: auto;
+}
+
+.nav-links {
+    display: flex;
+    /* Dispone los enlaces en fila */
+    flex-direction: row;
+    /* Asegura que los enlaces estén horizontales */
+    margin-left: auto;
+    /* Empuja los enlaces hacia la derecha */
+    align-items: center;
+    /* Alinea los enlaces verticalmente */
+    gap: 1.1em;
+    /* Espacio entre los enlaces */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #d3dadd;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding-top: 0%;
+    padding-left: 2em;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 1.5%;
+    /*Ajusta margen del navbar la parte derecha*/
+}
+
+/* Estilo para el logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    /* Empuja el logo a la izquierda */
+}
+
+/* Estilos para la lista en la barra de navegación */
+.navbar-nav {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.navbar-nav.left {
+    display: flex;
+    align-items: center;
+    margin-left: -1em;
+}
+
+.navbar-nav.right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+
+/* Estilos para los elementos de la lista */
+.nav-item {
+    font-family: "Oswald", sans-serif;
+    flex-direction: row;
+    margin-right: auto;
+}
+
+
+/* Estilos para los enlaces dentro de la navbar */
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+}
+
+/* Efecto hover para los enlaces */
+.nav-link:hover {
+    color: #17a2b8;
+}
+
+/* Estilo para el subrayado del enlace activo */
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.2em;
+    background-color: #17a2b8;
+    position: center;
+    bottom: -5px;
+    left: 0;
+}
+
+.video-container {
+    width: 100%;
+    height: 70vh;
+    /* El video ocupa toda la ventana */
+    overflow: hidden;
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Recorta el video si es necesario */
+    opacity: 0.85;
+    /* Hace el video más opaco */
+}
+
+.video-carrito-container {
+    width: 100%;
+    height: 40vh;
+    /* El video ocupa toda la ventana */
+    overflow: hidden;
+    position: relative;
+    margin-top: 2em;
+    transform: scaleX(-1);
+    margin-bottom: -8.2em;
+    z-index: -1;
+}
+
+.video-carrito-container video {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Recorta el video si es necesario */
+    opacity: 0.85;
+    /* Hace el video más opaco */
+}
+
+
+.overlay-text {
+    position: absolute;
+    bottom: 45%;
+    /* Ajusta la posición del texto */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    font-size: 2.5rem;
+    /* Tamaño ajustado para mantenerlo en una sola línea */
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
+    /* Fuente elegante */
+    font-weight: 900;
+    white-space: nowrap;
+    /* Evita que el texto se divida en varias líneas */
+
+}
+
+.overlay-text span {
+    color: #ff3b3b;
+    width: 100%;
+    /* Color llamativo para la palabra "amas" */
+    font-family: 'Montserrat', sans-serif;
+    /* Fuente bold y moderna */
+
+}
+
+/*GALERIA PRODUCTOS CLICK*/
+/* Estilos de la galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}*/
+.imagen {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Estilos del modal */
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-img-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.modal-img.active {
+    border-color: #007bff;
+}
+
+#main-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cantidad {
+    margin: 10px 0;
+}
+
+.comprar-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.add-carrito-prod {
+    color: white;
+}
+
+.add-carrito-modal-btn {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0.3em;
+    border-radius: 2em;
+}
+
+#cantidad-modal {
+    width: 10%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*Estilo seleccion cantidades*/
+.input-cantidades {
+    width: 17%;
+    border-radius: 2em;
+    border-width: 0.3em;
+    border-color: #17a2b8;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos del menú hamburguesa */
+/* Menú hamburguesa */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.imagen-inicio {
+    width: 22em;
+    margin-top: 5em;
+}
+
+/* Expande la imagen cuando está activa */
+.imagen-inicio:hover {
+    transform: scale(1.04);
+    /* Escala la imagen un 20% más grande */
+    cursor: pointer;
+    /* Cambia el cursor al pasar */
+}
+
+.div-text-ini {
+    background-color: #17a2b8;
+    height: 8em;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    /* Centra el texto verticalmente dentro del div */
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    margin-top: -2.2em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.div-img-ini {
+
+    flex-direction: column;
+    /* Para alinear el texto debajo de la imagen */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Ocupa todo el ancho de la pantalla */
+    text-align: center;
+    padding: 20px 0;
+    /* Espaciado superior e inferior */
+    background-color: #f8f8f8;
+    /* Cambia este color si es necesario */
+}
+
+.dets_ini_todos {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dets_ini_todos p {
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.ini_dets {
+    width: 95%;
+    position: relative;
+    align-items: center;
+    height: 30em;
+    margin-left: 2.5%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.img_dets {
+    width: 50%;
+    align-self: left;
+}
+
+#ini_det1 {
+    margin-top: 8em;
+    background-color: #48CFCB;
+    margin-bottom: -8em;
+}
+
+#img_ini_1 {
+    width: 100%;
+    height: 30.2em;
+}
+
+#img_ini_2 {
+    width: 100%;
+    height: 30.2em;
+    margin-top: 0.2em;
+}
+
+#img_ini_3 {
+    width: 100%;
+    height: 30.2em;
+}
+
+#ini_det2 {
+    background-color: #229799;
+    width: 95%;
+    margin-top: 10em;
+    height: 30.2em;
+}
+
+#ini_det3 {
+    margin-top: 2em;
+    background-color: #227B94;
+    margin-bottom: -8em;
+    margin-bottom: 2em;
+}
+
+.text_dets {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    width: 50%;
+    color: white;
+    align-self: center;
+    text-align: center;
+}
+
+/*Productos*/
+.productos-container {
+    display: flex;
+    justify-content: space-between;
+    /* Espacio uniforme entre productos */
+    align-items: flex-start;
+    padding: 20px;
+
+    gap: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    /* Cada producto ocupa un 30% del ancho */
+    padding: 16px;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: auto;
+    align-self: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+
+}
+
+.producto img {
+
+    width: 100%;
+    /* La imagen ocupa todo el ancho de la tarjeta */
+    height: auto;
+    align-content: end;
+    /*object-fit: cover; Recorta la imagen si es necesario */
+    border-radius: 4px;
+}
+
+.producto p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    /* Efecto de zoom al hacer hover */
+}
+
+/*Quienes somos*/
+.quienes-somos-title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    color: #227B94;
+    margin-top: 4em;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.custom-video-player {
+    position: relative;
+    width: min-content;
+    margin: auto;
+    width: 40%;
+    min-width: 50%;
+}
+
+.custom-video-player video {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #17a2b8;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+button,
+input[type="range"] {
+    margin: 0 5px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="range"]:hover {
+    opacity: 0.8;
+}
+
+
+.div-vid-quienes-somos {
+    position: relative;
+    width: 70%;
+    /* Ancho del contenedor */
+    max-width: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    border-radius: 1em;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Esconde el exceso de contenido */
+    background: #ffffff;
+    /* Fondo del contenedor */
+}
+
+.vid-quienes-somos video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nosotros-carrousel {
+    max-width: auto;
+    width: 25em;
+    z-index: -1;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 0.5em solid;
+    border-color: #17a2b8;
+    background-image: url(../images/nosotros/petsBG.jpg);
+    background-size: 25em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    align-content: center;
+}
+
+.nosotros {
+    display: flex;
+    height: auto;
+    width: 300%;
+    /* Tres imágenes, 100% cada una */
+    animation: slide 9s infinite;
+    position: relative;
+}
+
+.nosotros img {
+    width: 0.2em;
+    position: relative;
+    height: auto;
+    z-index: -1;
+    flex: 1 0 20%;
+    /* Cada imagen ocupa el 100% del contenedor */
+}
+
+#parte-ganancias-somos {
+    margin-bottom: auto;
+    position: relative;
+}
+
+.quienes-somos-text {
+    text-align: center;
+    z-index: -1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.quienes-somos-f-text {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17a2b8;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    33.33% {
+        transform: translateX(-33%);
+    }
+
+    66.66% {
+        transform: translateX(-66%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.cantidades_prods {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 1em;
+}
+
+.cantidades_prods select {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.select_prods button {
+    font-family: Helvetica;
+    font-weight: 600;
+    background-color: #17a2b8;
+    padding: 1em;
+    border-radius: 2em;
+    border: 0em;
+    margin-top: 15px;
+}
+
+.select_prods button:hover {
+    background-color: lightgray;
+}
+
+.tit_prods {
+    padding-top: 3.5em;
+    margin-left: 1em;
+    margin-bottom: -0.2em;
+    text-decoration: underline;
+    text-decoration-color: #17a2b8;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.derechos-reservados {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#miCarritoTit {
+    padding-left: 1em;
+    font-family: "Oswald", sans-serif;
+    position: relative;
+    z-index: -1;
+    text-decoration: underline;
+    text-decoration-color: #17a2b8;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
+}
+
+#div-tit-carrito {
+    background-color: white;
+    width: fit-content;
+    margin-right: 55%;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    border-bottom-right-radius: 2em;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+    position: relative;
+    font-size: 1rem;
+}
+
+#iconCarrito {
+    width: 2em;
+    height: 2em;
+    padding-top: 1.5em;
+    padding-left: 1em;
+    margin-right: 1em;
+}
+
+#miCarritoDet {
+    background-color: #d3daddd5;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    width: 60%;
+    overflow-y: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.eliminar-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    position: sticky;
+    /* Asegura que sea clickeable */
+    z-index: 1000;
+}
+
+.prods-detalle {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    /* Tres columnas: texto, precio y botón */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin-top: -1em;
+    margin-bottom: auto;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#tit-desglose {
+    margin-bottom: 1.5rem;
+    color: #17a2b8;
+    font-size: 1.3em;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carrito-contenedor {
+    display: block;
+    /* Alinea elementos en fila */
+    flex-direction: row;
+    justify-content: space-between;
+    /* Espaciado entre el carrito y el botón */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio verticalmente */
+    margin-bottom: 30%;
+    max-width: 100%;
+    /* Ajusta el ancho máximo */
+}
+
+#recordatorioCarrito {
+    background-color: #227B94;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 20%;
+    border-radius: 2em;
+    padding: 1em;
+    /* Agregar espacio interno */
+    position: fixed;
+    /* Esto mantiene el recordatorio dentro de su flujo */
+    align-self: center;
+    bottom: 5%;
+    /* Centra verticalmente */
+    right: 5%;
+    /* Desplaza hacia la derecha */
+    transform: translateY(-50%);
+    /* Ajusta el centrado vertical */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#seccion-2-carr {
+    margin-top: 20em;
+}
+
+#recordatorioCarrito:hover {
+    transform: translateY(-50%) scale(1.05);
+    /* Escala el tamaño y mantiene su posición */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+    /* Incrementa la sombra para efecto visual */
+}
+
+#recordatorioCarrito h4 {
+    margin: 0.2rem;
+    color: white;
+}
+
+#img_recordatorio {
+    width: 10em;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+    /* Espacio entre las columnas */
+    width: 100%;
+    margin-bottom: auto;
+    overflow-y: auto;
+}
+
+#div_btn_pagar {
+    font-size: 0.8rem;
+    margin-top: -20%;
+    position: sticky;
+    left: 55%;
+    margin-bottom: 2em;
+
+    width: 80%;
+    /* Ajusta el ancho según sea necesario */
+    text-align: center;
+}
+
+#btn_pagar {
+    background-color: #17a2b8;
+    margin-top: 1em;
+    width: 30%;
+    margin-left: 1em;
+    border-radius: 1em;
+    color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 0.5em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#btn_pagar:hover {
+    background-color: gray;
+}
+
+#main-carrito {
+    display: flex;
+    margin-bottom: 2em;
+    flex-direction: column;
+    /* Asegura una disposición vertical */
+    justify-content: space-between;
+    /* Espacio automático entre los elementos */
+}
+
+#div_dudas_carrito {
+    text-align: center;
+    background-color: #227B94;
+    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    border-radius: 100em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    /*CAMBIAR AQUI*/
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#txt_dudas {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: white;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    margin-top: 0.2em;
+    margin-bottom: 0.3em;
+    font-size: 1.3em;
+    letter-spacing: 0.02em;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+#body-cuenta {
+    display: flex;
+
+}
+
+.div-form {
+    align-self: center;
+    margin-top: 7em;
+    width: 80%;
+    max-width: 40em;
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding-right: 2em;
+    margin-bottom: 2em;
+}
+
+.div-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.form-footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-footer a:hover {
+    color: #0056b3;
+}
+
+.social-media {
+    color: white;
+}
+
+#div-relleno {
+    flex: 0.5;
+    /* Ocupa el espacio disponible */
+}
+
+#loginForm {
+    flex: 1;
+    /* Toma el espacio disponible entre el contenido y el footer */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+}
+
+/* Footer */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 2em;
+    display: flex;
+    margin-left: 0em;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    text-align: center;
+    width: auto;
+}
+
+/* Redes sociales - Alinear horizontalmente los íconos */
+.footer .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    /* Añade un espacio entre los íconos */
+    margin-bottom: 10px;
+    /* Espacio entre los íconos y los derechos reservados */
+}
+
+/* Enlaces de redes sociales */
+.footer .social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imágenes de los íconos */
+.footer .social-media img {
+    display: block;
+}
+
+/* Derechos reservados */
+.footer .derechos-reservados {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.footer .derechos-reservados a {
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width: 1080px) {
+    .dets_ini_todos {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4em;
+    }
+
+    .overlay-text {
+        font-size: 1.8rem;
+    }
+
+    .ini_dets {
+        flex-direction: column;
+        align-self: center;
+        height: auto;
+        width: 80%;
+        border-radius: 2em;
+        border: 1em;
+        border-color: #17a2b8;
+        margin-left: 0%;
+        align-items: center;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .ini_dets img {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .ini_dets p {
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    #ini_det2 {
+        flex-direction: column;
+        align-self: center;
+        height: auto;
+        width: 80%;
+        margin-left: 0%;
+        align-items: center;
+    }
+
+    #ini_det1:hover {
+        transform: scale(1.04);
+    }
+
+    #ini_det2:hover {
+        transform: scale(1.04);
+    }
+
+    #ini_det3:hover {
+        transform: scale(1.04);
+    }
+
+    .imagen-inicio {
+        margin-top: -2em;
+    }
+
+
+    #img_ini_1 {
+        width: 150%;
+        border-radius: 22em;
+        justify-content: center;
+        margin-left: -25%;
+        margin-top: 15%;
+        height: auto;
+    }
+
+    #img_ini_2 {
+        width: 150%;
+        border-radius: 22em;
+        justify-content: center;
+        margin-left: -25%;
+        margin-bottom: 1em;
+        height: auto;
+
+    }
+
+    #img_ini_3 {
+        width: 150%;
+        border-radius: 22em;
+        justify-content: center;
+        margin-left: -25%;
+        margin-top: 15%;
+        height: auto;
+    }
+
+    .text_dets {
+        font-size: 1.5em;
+    }
+
+    #ini_det2 p {
+        justify-content: center;
+    }
+
+    #img_recordatorio {
+        width: 70%;
+    }
+
+
+
+    #txt_dudas {
+        padding: 1em;
+        font-size: 1em;
+    }
+
+
+}
+
+/* Estilo responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #med-carr-recor {
+        margin-right: -2em;
+    }
+
+    #recordatorioCarrito {
+        width: 20%;
+        margin-left: -25em;
+        margin-top: 0em;
+        max-height: 30em;
+        font-size: 0.9em;
+    }
+
+    .overlay-text {
+        font-size: 1.5rem;
+        white-space: wrap;
+    }
+
+    .productos-container {
+        flex-direction: column;
+        /* En pantallas pequeñas, los productos se apilan verticalmente */
+        align-items: center;
+
+    }
+
+    .quienes-somos-title {
+        margin-top: 4em;
+    }
+
+    .nosotros-carrousel {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        width: 50%;
+    }
+
+    .nosotros img {
+        margin-top: 1.8em;
+    }
+
+    .producto {
+        width: 40%;
+        /* Las tarjetas ocupan más espacio en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        position: fixed;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar-links a {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1 em solid #575757;
+    }
+
+    .navbar-nav {
+        padding-inline: 0.05%;
+    }
+
+    .nav-link {
+        font-size: 0.9em;
+    }
+
+    .navbar-nav.right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 6em;
+        right: 0;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-nav.right.active {
+        display: flex;
+    }
+
+    .div-text-ini {
+        margin-top: -3em;
+        font-size: 1em;
+    }
+
+    .imagen-inicio {
+        width: 45%;
+    }
+
+}
