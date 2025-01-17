@@ -1,4 +1,37 @@
 const express = require('express');
+const routes = require('./routes');
+const path = require('path');
+
+
+const app = express();
+
+// Servir la carpeta "public" como estática
+app.use(express.static('public'));
+
+// Middleware para manejar JSON
+app.use(express.json());
+
+// Servir archivos estáticos desde la carpeta "public"
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Prefijo para todas las rutas de la API
+app.use('/api', routes);
+
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
+
+
+// Ruta por defecto (opcional)
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html'); // Cargar el archivo HTML principal
+});
+
+// Iniciar el servidor
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
+
+/*const express = require('express');
 const bodyParser = require('body-parser');
 const sql = require('mssql');
 const app = express();
@@ -13,7 +46,9 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 
-/*app.listen(3000, '172.16.0.122', () => {
+
+
+app.listen(3000, '172.16.0.122', () => {
     console.log('Servidor escuchando en http://172.16.0.122:3000');
   });
 //Inicializa la base de datos SQL

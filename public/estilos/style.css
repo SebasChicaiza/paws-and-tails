@@ -95,7 +95,7 @@ body.dark-mode #registroForm input {
     border-color: white;
 }
 
-body.dark-mode #loginForm input {
+body.dark-mode #login-form input {
     background-color: #d6d6d6;
     border-color: white;
 }
@@ -398,6 +398,62 @@ ul {
 .modal-img.active {
     border-color: #007bff;
 }
+/* Estilos para el modal 2 */
+.modal {
+    display: none; /* Se oculta por defecto */
+    position: fixed; /* Posición fija en la pantalla */
+    z-index: 1; /* Para que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Toma toda la pantalla */
+    height: 100%; /* Toma toda la pantalla */
+    overflow: auto; /* En caso de que el contenido sea muy grande */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ajusta el tamaño del modal */
+    max-width: 500px; /* Limita el ancho del modal */
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image-container img {
+    width: 100%; /* Asegura que la imagen ocupe todo el espacio disponible */
+    max-height: 300px; /* Limita el tamaño máximo de la imagen */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+}
+
+.product-description {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 #main-img {
     width: 100%;
@@ -425,7 +481,31 @@ ul {
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/* Estilo para los totales */
+#totales-carrito {
+    background-color: #d3daddd5;
+    margin-top: -10em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    padding-left: 1em;
+    margin-bottom: 2em;
+    position: relative;
+    width: 60%;
+    overflow-y: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+/* Alineación del contenido de cada total */
+#totales-carrito div {
+    margin-top: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+    flex: 1; /* Asegura que el espacio se distribuya uniformemente */
+    text-align: right; /* Alinea el texto a la derecha */
+}
 .add-carrito-prod {
     color: white;
 }
@@ -592,6 +672,7 @@ ul {
 .productos-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     /* Espacio uniforme entre productos */
     align-items: flex-start;
     padding: 20px;
@@ -983,7 +1064,7 @@ input[type="range"]:hover {
 
 #div_btn_pagar {
     font-size: 0.8rem;
-    margin-top: -20%;
+    margin-top: -30%;
     position: sticky;
     left: 55%;
     margin-bottom: 2em;
@@ -993,7 +1074,7 @@ input[type="range"]:hover {
     text-align: center;
 }
 
-#btn_pagar {
+#btn_continuar {
     background-color: #17a2b8;
     margin-top: 1em;
     width: 30%;
@@ -1010,7 +1091,7 @@ input[type="range"]:hover {
     transition: background-color 0.3s ease;
 }
 
-#btn_pagar:hover {
+#btn_continuar:hover {
     background-color: gray;
 }
 
@@ -1061,6 +1142,15 @@ input[type="range"]:hover {
 #body-cuenta {
     display: flex;
 
+}
+#formularioFacturacion h3{
+    color: #17a2b8;
+    text-align: center;
+    size: 1.2em;
+    padding: 1.2em;
+}
+#facturacionForm{
+    padding-inline: 2em;
 }
 
 .div-form {
@@ -1152,7 +1242,7 @@ input[type="range"]:hover {
     /* Ocupa el espacio disponible */
 }
 
-#loginForm {
+#login-form {
     flex: 1;
     /* Toma el espacio disponible entre el contenido y el footer */
     justify-content: center;
@@ -1160,7 +1250,30 @@ input[type="range"]:hover {
     align-items: center;
     /* Centrar verticalmente */
 }
-
+#loginButton{    
+    margin-top: 1.2em;   
+}
+#clientesDropdown{
+    border-width: 0.5em;
+    border-radius: 2em;
+    font-size: 1.2em;
+    margin-top: 2em;
+    padding: 1em;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 2em;
+    text-align: center;
+}
+#user-welcome{
+    text-decoration: underline;
+}
+#logout-btn{
+    color: white;    
+}
+#logout-btn-item{
+    background-color: grey;
+    border-radius: 1em;
+}
 /* Footer */
 input[type="text"],
 input[type="email"],

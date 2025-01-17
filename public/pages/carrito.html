@@ -20,6 +20,9 @@
                 <h1 class="oswald-title">
                     Paws & Tails
                 </h1>
+                <li class="nav-item" id="welcome-message" style="display: none;">
+                    <span id="user-welcome"></span>
+                </li>
             </ul>
             <div class="menu-icon" id="menu-icon">&#9776;</div>
             <ul class="navbar-nav right" id="nav-links">
@@ -37,6 +40,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="cuenta.html">Mi Cuenta</a>
+                </li>
+                <!-- Botón de cerrar sesión -->
+                <li class="nav-item" id="logout-btn-item" style="display: none;">
+                    <button id="logout-btn" class="nav-link">Cerrar sesión</button>
                 </li>
                 <li class="nav-item">
                     <button class="toggle-btn" onclick="toggleDarkMode()">🌞 / 🌙</button>
@@ -57,15 +64,17 @@
             <img src="../images/carrito/carritoIcon.png" id="iconCarrito">
         </div>
     </div>
-    
+
 
     <main class="main-carrito">
         <div class="contenedor-carrito">
             <div id="miCarritoDet">
-                <h3 id="tit-desglose">Mis productos</h3>                        
+                <h3 id="tit-desglose">Mis productos</h3>
+
             </div>
-            
-        </div>  
+            <div id="totales-carrito"></div>
+        </div>
+
         <div class="seccion-2-carr">
             <a href="productos.html" id="recordatorioCarrito">
                 <h4>¿Te has olvidado algo?
@@ -74,10 +83,61 @@
                 </h4>
                 <img src="../images/mascotas.jpg" id="img_recordatorio">
             </a>
-        </div>            
-    </main>   
-    <button type="button" id="btn_pagar">Pagar</button>
- 
+        </div>
+    </main>
+    <button type="button" id="btn_continuar">Continuar</button>
+    <!-- Aquí aparece la lista de clientes disponibles -->
+    
+
+    <!-- Formulario de facturación oculto inicialmente -->
+    <div id="formularioFacturacion" style="display: none;" class="div-form">
+        <h3>Agregar Cliente para la Factura</h3>
+        <form id="facturacionForm">
+            <div class="form-group">
+                <label for="nombreCliente">Nombre:</label>
+                <input type="text" id="nombreCliente" name="nombre" required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidoCliente">Apellido:</label>
+                <input type="text" id="apellidoCliente" name="apellido" required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="cedulaRuc">Cédula/RUC:</label>
+                <input type="text" id="cedulaRuc" name="cedulaRuc" required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="telefonoCliente">Teléfono:</label>
+                <input type="text" id="telefonoCliente" name="telefono" required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="direccionCliente">Dirección:</label>
+                <input type="text" id="direccionCliente" name="direccion" required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+            </div>
+
+            <button type="submit" class="form-button">Agregar Cliente</button>
+        </form>
+
+    </div>
+    <div>
+        
+    </div>
+    <!-- Este debe existir en tu HTML -->
+    <div id="clientesList" style="display:none;">
+        <h3 style="text-align: center; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Selecciona un cliente para la factura</h3>
+        <!-- Contenido que se mostrará con los clientes -->
+    </div>
+    <select id="clientesDropdown" style="display:none;"></select>
+    <button type="button" id="btn_pagar" class="form-button" style="display:none; width: 30%; align-self: center;">Pagar</button>
+
     <footer class="footer">
         <!-- Redes Sociales -->
         <div class="social-media">
@@ -98,8 +158,8 @@
     </footer>
     <script src="../scripts/script.js"></script>
     <script src="../app.js"></script>
-    
-    
+
+
 </body>
 
 </html>

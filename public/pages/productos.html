@@ -20,6 +20,9 @@
                 <h1 class="oswald-title">
                     Paws & Tails
                 </h1>
+                <li class="nav-item" id="welcome-message" style="display: none;">
+                    <span id="user-welcome"></span>
+                </li>
             </ul>
             <div class="menu-icon" id="menu-icon">&#9776;</div>
             <ul class="navbar-nav right" id="nav-links">
@@ -37,6 +40,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="cuenta.html">Mi Cuenta</a>
+                </li>                
+                <!-- Botón de cerrar sesión -->
+                <li class="nav-item" id="logout-btn-item" style="display: none;">
+                    <button id="logout-btn" class="nav-link">Cerrar sesión</button>
                 </li>
                 <li class="nav-item">
                     <button class="toggle-btn" onclick="toggleDarkMode()">🌞 / 🌙</button>
@@ -46,201 +53,31 @@
     </header>
     <h2 class="tit_prods">Productos</h2>
     <!-- PRODUCTOS -->
-    <div class="productos-container" class="galeria">
-        <!-- Producto 1 -->
-        <div class="producto">
-            <img src="../images/productos/juguete1-res.jpg"
-                onclick="abrirModal('Masticador para perros', 'Juguete para perros de pequeña edad para estimular su mordida.', ['../images/productos/Juguete1/img1.jpg', '../images/productos/Juguete1/img2.jpg', '../images/productos/Juguete1/img3.jpg'])"
-                alt="Producto 1">
-            <h3 class="nombre-producto">Masticador para perros</h3>
-            <p class="descripcion-producto">Juguete para perros de pequeña edad para estimular su mordida.</p>
-            <div class="precio">$7.99</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros1">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad1" min="1" value="1">
-                </form>
-                <br>
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Masticador para perros', 'Juguete para perros de pequeña edad para estimular su mordida.', '$7.99', document.getElementById('cantidad1').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
-
-
-        <!-- Producto 2 -->
-        <div class="producto">
-            <img src="../images/productos/juguetePollo.jpeg"
-                onclick="abrirModal('Juguete de gallina', 'Juguete de gallina para morder. Emite un sonido similar a una gallina cada que se lo muerde.', ['../images/productos/Juguete2/img1.jpg', '../images/productos/Juguete2/img2.jpg', '../images/productos/Juguete2/img3.jpg'])"
-                alt="Producto 2">
-            <h3 class="nombre-producto">Juguete de gallina</h3>
-            <p class="descripcion-producto">Juguete de gallina para morder. Emite un sonido similar a una gallina cada
-                que se lo muerde.</p>
-            <div class="precio">$12.99</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros2">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad2" min="1" value="1">
-                </form>
-                <br>
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Juguete de gallina', 'Juguete de gallina para morder. Emite un sonido similar a una gallina cada que se lo muerde.', '$12.99', document.getElementById('cantidad2').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
-
-
-        <!-- Producto 3 -->
-        <div class="producto">
-            <img src="../images/productos/juguete2.jpg"
-                onclick="abrirModal('Elefante para morder', 'Juguete para morder para perros en forma de elefante.', ['../images/productos/Juguete3/img1.jpg', '../images/productos/Juguete3/img2.jpg', '../images/productos/Juguete3/img3.jpg'])"
-                alt="Producto 3">
-            <h3 class="nombre-producto">Elefante para morder</h3>
-            <p class="descripcion-producto">Juguete para morder para perros en forma de elefante.</p>
-            <div class="precio">$6.99</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros3">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad3" min="1" value="1">
-                </form>
-                <br>
-                <!-- Botón que llama a la función agregarAlCarrito -->
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Elefante para morder', 'Juguete para morder para perros en forma de elefante.', '$6.99', document.getElementById('cantidad3').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
-
-
-        <!-- Producto 4 -->
-        <div class="producto">
-            <img src="../images/productos/juguete3.jpg"
-                onclick="abrirModal('Juguete en forma de pesa', 'Ideal para perros de todo tamaño. Gama de colores a elección.', ['../images/productos/Juguete4/img1.jpg', '../images/productos/Juguete4/img2.jpg', '../images/productos/Juguete4/img3.jpg'])"
-                alt="Producto 4">
-            <h3 class="nombre-producto">Juguete en forma de pesa</h3>
-            <p class="descripcion-producto">Ideal para perros de todo tamaño. Gama de colores a elección.</p>
-            <div class="precio">$4.99</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros4">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad4" min="1" value="1">
-                </form>
-                <br>
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Juguete en forma de pesa', 'Ideal para perros de todo tamaño. Gama de colores a elección.', '$4.99', document.getElementById('cantidad4').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
-
-    </div>
-    <div class="productos-container" class="galeria">
-        <!-- Producto 5 -->
-        <div class="producto">
-            <img src="../images/productos/jugueteAnimales.png"
-                onclick="abrirModal('Varios animales para morder', 'Distintos tipos de animales y colores. Ideal para perritos curiosos.', ['../images/productos/Juguete5/img1.jpg', '../images/productos/Juguete5/img2.jpg', '../images/productos/Juguete5/img3.jpg'])"
-                alt="Producto 5">
-            <h3 class="nombre-producto">Varios animales para morder</h3>
-            <p class="descripcion-producto">Distintos tipos de animales y colores. Ideal para perritos curiosos.</p>
-            <div class="precio">$16.99</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros5">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad5" min="1" value="1">
-                </form>
-                <br>
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Varios animales para morder', 'Distintos tipos de animales y colores. Ideal para perritos curiosos.', '$16.99', document.getElementById('cantidad5').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
-
-
-        <!-- Producto 6 -->
-        <div class="producto">
-            <img src="../images/productos/jugueteGato1.jpg"
-                onclick="abrirModal('Juguete rascadera para Gato', 'Ideal para gatos curiosos y activos. Contiene una sorpresa dentro.', ['../images/productos/Juguete6/img1.jpg', '../images/productos/Juguete6/img2.jpg', '../images/productos/Juguete6/img3.jpg'])"
-                alt="Producto 6">
-            <h3 class="nombre-producto">Juguete rascadera para Gato</h3>
-            <p class="descripcion-producto">Ideal para gatos curiosos y activos. Contiene una sorpresa dentro.</p>
-            <div class="precio">$19.99</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros6">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad6" min="1" value="1">
-                </form>
-                <br>
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Juguete rascadera para Gato', 'Ideal para gatos curiosos y activos. Contiene una sorpresa dentro.', '$19.99', document.getElementById('cantidad6').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
-
-
-        <!-- Producto 7 -->
-        <div class="producto">
-            <img src="../images/productos/jugueteGato2.jpg"
-                onclick="abrirModal('Rascadera de dos pisos para gato', 'Si a tus felinos les gusta saltar por todas partes, este juguete es ideal para ti.', ['../images/productos/Juguete7/img1.jpg', '../images/productos/Juguete7/img2.jpg', '../images/productos/Juguete7/img3.jpg'])"
-                alt="Producto 7">
-            <h3 class="nombre-producto">Rascadera de dos pisos para gato</h3>
-            <p class="descripcion-producto">Si a tus felinos les gusta saltar por todas partes, este juguete es ideal
-                para ti.</p>
-            <div class="precio">$29.99</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros7">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad7" min="1" value="1">
-                </form>
-                <br>
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Rascadera de dos pisos para gato', 'Si a tus felinos les gusta saltar por todas partes, este juguete es ideal para ti.', '$29.99', document.getElementById('cantidad7').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
-
-        <!-- Producto 8 -->
-        <div class="producto">
-            <img src="../images/productos/jugueteGato3Raton.jpg"
-                onclick="abrirModal('Ratón de juguete para gato', 'Ratón de juguete para tus felinos con baterías internas. ¡Se mueve solo!', ['../images/productos/Juguete8/img1.jpg', '../images/productos/Juguete8/img2.jpg', '../images/productos/Juguete8/img3.jpg'])"
-                alt="Producto 8">
-            <h3 class="nombre-producto">Ratón de juguete para gato</h3>
-            <p class="descripcion-producto">Ratón de juguete para tus felinos con baterías internas. ¡Se mueve solo!</p>
-            <div class="precio">$50.00</div>
-            <br>
-            <div class="select_prods">
-                <form class="cantidades_prods">
-                    <label for="numeros8">Cantidad:</label>
-                    <input class="input-cantidades" type="number" id="cantidad8" min="1" value="1">
-                </form>
-                <br>
-                <button class="add-carrito-prod"
-                    onclick="agregarAlCarrito('Ratón de juguete para gato', 'Ratón de juguete para tus felinos con baterías internas. ¡Se mueve solo!', '$50.00', document.getElementById('cantidad8').value)">Añadir
-                    al carrito</button>
-            </div>
-        </div>
+    <div class="productos-container" id="productos-container">
+        <!-- Los productos se cargarán aquí automáticamente con JavaScript -->
     </div>
 
     <!-- Modal para mostrar las imágenes del producto -->
-    <div id="modal">
-        <div id="modal-content">
-            <button class="close-btn" onclick="cerrarModal()">×</button>
-            <img id="main-img" src="" alt="">
-            <div class="modal-img-container" id="modal-img-container"></div>
-            <div id="modal-desc" class="descripcion"></div>
-            <!-- <div class="cantidad">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad-modal" min="1" value="1">
+    <!-- Modal -->
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <!-- La imagen principal se cargará aquí -->
+                </div>
+                <div class="product-description">
+                    <p id="product-description"></p>
+                </div>
+                <div class="modal-thumbnails">
+                    <!-- Las miniaturas de las imágenes secundarias se cargarán aquí -->
+                </div>
             </div>
-            <button class="add-carrito-modal-btn">Añadir al carrito</button>
-        -->
         </div>
     </div>
+
+
     <footer class="footer">
         <!-- Redes Sociales -->
         <div class="social-media">
@@ -260,6 +97,120 @@
         </div>
     </footer>
     <script src="../scripts/script.js"></script>
+
+    <!-- Incluir el script para cargar productos -->
+    <script>
+        let productos = [];
+
+        async function cargarProductos() {
+            try {
+                const response = await fetch('/api/productos');
+
+                if (!response.ok) {
+                    throw new Error(`Error al cargar productos: ${response.statusText}`);
+                }
+
+                productos = await response.json(); // Aquí asignas los productos a la variable global
+
+                // Ahora puedes usar la variable productos en otras funciones
+                mostrarProductos(); // Llama a una función que muestre los productos
+
+            } catch (err) {
+                console.error('Error al cargar los productos:', err);
+                alert('No se pudo cargar la lista de productos. Intenta nuevamente.');
+            }
+        }
+
+        function mostrarProductos() {
+            const contenedorProductos = document.getElementById('productos-container');
+            contenedorProductos.innerHTML = '';  // Limpiar el contenedor antes de agregar productos
+
+            productos.forEach(producto => {
+                const productoHTML = `
+            <div class="producto">
+                <img src="${producto.img_principal || 'default-image.jpg'}" alt="${producto.prod_nombre}" onclick="mostrarModal('${producto.id_producto}')"/>
+                <h3 class="nombre-producto">${producto.prod_nombre}</h3>
+                <p class="descripcion-producto">${producto.prod_desc}</p>
+                <div class="precio">$${producto.prod_precio}</div>
+                <div class="select_prods">
+                    <form class="cantidades_prods">
+                        <label for="cantidad-${producto.id_producto}">Cantidad:</label>
+                        <input class="input-cantidades" type="number" id="cantidad-${producto.id_producto}" min="1" value="1">
+                    </form>
+                    <button class="add-carrito-prod"
+                        onclick="agregarAlCarrito('${producto.id_producto}', '${producto.prod_nombre}', '${producto.prod_desc}', '${producto.prod_precio}', document.getElementById('cantidad-${producto.id_producto}').value)">Añadir al carrito</button>
+
+                    </div>
+            </div>
+        `;
+                contenedorProductos.innerHTML += productoHTML;  // Agregar el producto al contenedor
+            });
+        }
+
+        function mostrarModal(idProducto) {
+            const modal = document.getElementById("modal");
+            const modalImageContainer = document.querySelector(".modal-image-container");
+
+            if (!modalImageContainer) {
+                console.error("Contenedor de la imagen no encontrado");
+                return;
+            }
+
+            const productDescription = document.getElementById("product-description");
+            const modalThumbnails = document.querySelector(".modal-thumbnails");
+
+            // Limpiar el contenedor de imágenes, descripción y miniaturas
+            modalImageContainer.innerHTML = '';
+            modalThumbnails.innerHTML = '';
+            productDescription.innerHTML = '';
+
+            // Obtener el producto a través de la API
+            fetch(`http://localhost:3000/api/productos/${idProducto}`)
+                .then(response => response.json())
+                .then(product => {
+                    // Mostrar la imagen principal
+                    const imgPrincipal = document.createElement('img');
+                    imgPrincipal.src = `http://localhost:3000/${product.img_principal}`;
+                    imgPrincipal.alt = product.prod_nombre;
+                    modalImageContainer.appendChild(imgPrincipal);
+
+                    // Mostrar la descripción del producto
+                    productDescription.textContent = product.prod_desc;
+
+                    // Mostrar las imágenes secundarias como miniaturas
+                    product.imagenes.forEach(image => {
+                        const imgThumbnail = document.createElement('img');
+                        imgThumbnail.src = `http://localhost:3000/${image}`;
+                        imgThumbnail.alt = `${product.prod_nombre} - Imagen secundaria`;
+
+                        // Cambiar la imagen principal al hacer clic en una miniatura
+                        imgThumbnail.addEventListener('click', () => {
+                            modalImageContainer.innerHTML = ''; // Limpiar la imagen actual
+                            const newImg = document.createElement('img');
+                            newImg.src = imgThumbnail.src; // Establecer la nueva imagen
+                            newImg.alt = `${product.prod_nombre} - Imagen secundaria`;
+                            modalImageContainer.appendChild(newImg);
+                        });
+
+                        modalThumbnails.appendChild(imgThumbnail);
+                    });
+
+                    // Mostrar el modal
+                    modal.style.display = "block";
+                })
+                .catch(error => console.error("Error al cargar el producto:", error));
+        }
+
+
+        // Función para cerrar el modal
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }     
+
+        // Llamar la función al cargar la página
+        window.onload = cargarProductos;
+    </script>
 </body>
 
 </html>
